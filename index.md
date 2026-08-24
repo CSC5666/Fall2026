@@ -25,3 +25,5 @@ description: Course website for Cal Poly CSC 5666, Advanced Machine Learning.
 
 - [Syllabus, course notes, and project instructions]({{ '/resources/' | relative_url }})
 - [Continued research]({{ '/research/' | relative_url }})
+- [Gradescope](https://www.gradescope.com/courses/1355369)
+- [EdStem](https://edstem.org/us/join/nMfdkZ)
