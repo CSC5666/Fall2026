@@ -40,7 +40,7 @@
 
 = Learning Objectives
 
-As an advanced graduate course the ultimate learning object of this course is for you to develop the knowledge and skills to engage with and contribute to contemporary research in machine learning. Of course, as this field is rapid changing and very large we will cover some of the most important and fundamental approaches of current relevance and interest, while simultaneously developing the research skills to bring yourself up to speed in any other particular sub-area in the future.
+As an advanced graduate course the ultimate learning object of this course is for you to develop the knowledge and skills to engage with and contribute to contemporary research in machine learning. Of course, as this field is rapidly changing and very large we will cover some of the most important and fundamental approaches of current relevance and interest, while simultaneously developing the research skills to bring yourself up to speed in any other particular sub-area in the future.
 
 
 = Course Overview

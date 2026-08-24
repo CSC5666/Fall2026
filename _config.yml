@@ -3,8 +3,8 @@ short_title: "CSC 5666"
 description: "Course website for Cal Poly CSC 5666: Advanced Machine Learning."
 course_number: CSC 5666
 institution: California Polytechnic State University, San Luis Obispo
-url: ""
-baseurl: ""
+url: "https://csc5666.github.io/"
+baseurl: "/Fall2026"
 lang: en
 logo: /assets/images/logo.png
 favicon: /assets/images/logo.png
