@@ -1,0 +1,31 @@
+title: "CSC 5666 — Advanced Machine Learning"
+short_title: "CSC 5666"
+description: "Course website for Cal Poly CSC 5666: Advanced Machine Learning."
+course_number: CSC 5666
+institution: California Polytechnic State University, San Luis Obispo
+url: ""
+baseurl: ""
+lang: en
+logo: /assets/images/logo.png
+favicon: /assets/images/logo.png
+theme_color: "#154f3b"
+
+markdown: kramdown
+permalink: pretty
+
+exclude:
+  - .bundle
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - assets/files/README.md
+  - vendor
+
+sass:
+  style: compressed
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: default

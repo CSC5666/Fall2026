@@ -1,0 +1,18 @@
+<header class="site-header">
+  <a class="site-brand" href="{{ '/' | relative_url }}" aria-label="{{ site.title }} home">
+    <img class="brand-mark" src="{{ site.logo | relative_url }}" alt="" width="56" height="56">
+    <span class="brand-copy">
+      <span class="brand-kicker">Cal Poly</span>
+      <span class="wordmark">{{ site.short_title }}</span>
+    </span>
+  </a>
+  <nav aria-label="Primary navigation">
+    <ul>
+      {% for item in site.data.navigation %}
+        <li>
+          <a href="{{ item.url | relative_url }}"{% if page.url == item.url %} aria-current="page"{% endif %}>{{ item.label }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </nav>
+</header>

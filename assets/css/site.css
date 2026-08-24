@@ -1,0 +1,387 @@
+:root {
+  --paper: #fffff8;
+  --ink: #111;
+  --muted: #5b5b55;
+  --rule: #d7d7cc;
+  --brand-green: #154f3b;
+  --link: #155e46;
+  --link-hover: #0c7652;
+  --accent-bg: #f4f1e8;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 17px;
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background: var(--paper);
+  color: var(--ink);
+  font-family: et-book, Palatino, "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  line-height: 1.55;
+}
+
+.site-header,
+main,
+.site-footer {
+  width: min(90%, 1100px);
+  margin-inline: auto;
+}
+
+.site-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem 2rem;
+  padding: 1.25rem 0;
+  border-bottom: 1px solid var(--rule);
+}
+
+.site-brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.65rem;
+  color: var(--ink);
+  text-decoration: none;
+}
+
+.site-brand:hover,
+.site-brand:focus-visible {
+  color: var(--brand-green);
+}
+
+.brand-mark {
+  display: block;
+  width: 3.5rem;
+  height: 3.5rem;
+  object-fit: contain;
+}
+
+.brand-copy,
+.brand-kicker,
+.wordmark {
+  display: block;
+}
+
+.brand-kicker,
+.wordmark {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.brand-kicker {
+  color: var(--brand-green);
+  font-size: 0.65rem;
+  letter-spacing: 0.14em;
+}
+
+.wordmark {
+  color: var(--ink);
+  font-size: 0.82rem;
+  letter-spacing: 0.08em;
+}
+
+nav ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem 1.25rem;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+nav a {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.9rem;
+  text-decoration: none;
+}
+
+nav a[aria-current="page"] {
+  color: var(--ink);
+  font-weight: 650;
+  text-decoration: underline;
+  text-decoration-color: var(--brand-green);
+  text-decoration-thickness: 2px;
+  text-underline-offset: 0.35rem;
+}
+
+main {
+  padding: 3.5rem 0 5rem;
+}
+
+article {
+  width: min(100%, 760px);
+}
+
+h1,
+h2,
+h3 {
+  font-weight: 400;
+  line-height: 1.18;
+}
+
+h1 {
+  margin: 0 0 0.25rem;
+  font-size: clamp(2.4rem, 7vw, 4.6rem);
+  letter-spacing: -0.025em;
+}
+
+h2 {
+  margin: 3rem 0 0.85rem;
+  font-size: 2rem;
+  font-style: italic;
+}
+
+h3 {
+  margin: 2rem 0 0.5rem;
+  font-size: 1.35rem;
+}
+
+p,
+ul,
+ol,
+dl {
+  max-width: 680px;
+}
+
+p,
+li,
+dd {
+  font-size: 1.08rem;
+}
+
+.subtitle {
+  margin: 0 0 2.25rem;
+  color: var(--muted);
+  font-size: 1.45rem;
+  font-style: italic;
+}
+
+.lede {
+  font-size: 1.3rem;
+}
+
+a {
+  color: var(--link);
+  text-decoration-thickness: 0.06em;
+  text-underline-offset: 0.12em;
+}
+
+a:hover,
+a:focus-visible {
+  color: var(--link-hover);
+}
+
+a:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 3px;
+}
+
+.meta-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: 1rem;
+  margin: 2.25rem 0;
+  padding: 1.2rem 1.4rem;
+  background: var(--accent-bg);
+  border-left: 3px solid var(--ink);
+}
+
+.meta-grid dt {
+  color: var(--muted);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.meta-grid dd {
+  margin: 0.15rem 0 0;
+}
+
+.notice,
+.assignment,
+.research-card {
+  margin: 1.5rem 0;
+  padding: 1rem 1.25rem;
+  border: 1px solid var(--rule);
+}
+
+.notice p,
+.assignment p:last-child,
+.research-card p:last-child {
+  margin-bottom: 0;
+}
+
+.assignment h3,
+.research-card h3 {
+  margin-top: 0;
+}
+
+.status {
+  display: inline-block;
+  margin-left: 0.4rem;
+  padding: 0.05rem 0.45rem;
+  border: 1px solid var(--rule);
+  color: var(--muted);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.68rem;
+  font-style: normal;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  vertical-align: middle;
+}
+
+.resource-list {
+  padding-left: 1.2rem;
+}
+
+.resource-list li {
+  margin: 0.65rem 0;
+}
+
+.course-notes li {
+  margin-bottom: 1rem;
+}
+
+.resource-meta,
+.resource-links {
+  display: block;
+}
+
+.resource-meta {
+  color: var(--muted);
+  font-size: 0.9rem;
+  font-style: italic;
+}
+
+.resource-links {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.85rem;
+}
+
+.schedule-table {
+  max-width: 760px;
+  margin: 1.5rem 0;
+  overflow-x: auto;
+  border: 1px solid var(--rule);
+}
+
+.schedule-table:focus-visible {
+  outline: 2px solid var(--brand-green);
+  outline-offset: 3px;
+}
+
+.schedule-table table {
+  width: 100%;
+  min-width: 580px;
+  border-collapse: collapse;
+}
+
+.schedule-table th,
+.schedule-table td {
+  padding: 0.7rem 0.8rem;
+  border-bottom: 1px solid var(--rule);
+  text-align: left;
+  vertical-align: top;
+}
+
+.schedule-table thead th {
+  background: var(--accent-bg);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.75rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+
+.schedule-table tbody th {
+  color: var(--brand-green);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-weight: 700;
+}
+
+.schedule-table tbody td:nth-child(2) {
+  width: 9rem;
+  white-space: nowrap;
+}
+
+.schedule-table tbody tr:last-child th,
+.schedule-table tbody tr:last-child td {
+  border-bottom: 0;
+}
+
+blockquote {
+  max-width: 640px;
+  margin: 2rem 0;
+  padding-left: 1.25rem;
+  border-left: 2px solid var(--rule);
+  font-style: italic;
+}
+
+code {
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 0.86em;
+}
+
+.site-footer {
+  padding: 1.5rem 0 3rem;
+  border-top: 1px solid var(--rule);
+  color: var(--muted);
+}
+
+.site-footer p {
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  font-size: 0.78rem;
+}
+
+@media (max-width: 760px) {
+  .site-header {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 640px) {
+  html {
+    font-size: 16px;
+  }
+
+  .site-header {
+    padding-top: 1.25rem;
+  }
+
+  main {
+    padding-top: 2.5rem;
+  }
+
+  h2 {
+    margin-top: 2.4rem;
+  }
+}
+
+@media print {
+  nav,
+  .site-footer {
+    display: none;
+  }
+
+  body {
+    background: white;
+  }
+
+  main,
+  article {
+    width: 100%;
+  }
+
+  a {
+    color: inherit;
+  }
+}

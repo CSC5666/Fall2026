@@ -1,0 +1,132 @@
+syllabus:
+  - title: Fall 2026 syllabus
+    file: /assets/files/00-Syllabus.pdf
+    status: PDF
+
+project:
+  - title: Final Project Assignment Document
+    file: /assets/files/00-Project.pdf
+    status: PDF
+
+readings:
+  # - title: Week 1 — Foundations and Probability
+  #   chapters: Chapters 1–3
+  #   materials:
+  #     - label: PDF
+  #       url: /assets/files/01-Foundations-Probability.pdf
+  #     - label: Typst source
+  #       url: /assets/files/01-Foundations-Probability.typ
+  # - title: Week 2 — Graphical Models
+  #   chapters: Chapter 4
+  #   materials:
+  #     - label: PDF
+  #       url: /assets/files/02-Graphical-Models.pdf
+  #     - label: Typst source
+  #       url: /assets/files/02-Graphical-Models.typ
+  # - title: Week 3 — Information Theory and Bayesian Optimization
+  #   chapters: Chapter 5 and section 6.6
+  #   materials:
+  #     - label: PDF
+  #       url: /assets/files/03-Information-Theory-Bayesian-Optimization.pdf
+  #     - label: Typst source
+  #       url: /assets/files/03-Information-Theory-Bayesian-Optimization.typ
+  # - title: Week 4 — Inference and Message Passing
+  #   chapters: Chapters 7 and 9
+  #   materials:
+  #     - label: PDF
+  #       url: /assets/files/04-Inference-Message-Passing.pdf
+  #     - label: Typst source
+  #       url: /assets/files/04-Inference-Message-Passing.typ
+  # - title: Week 5 — Variational Inference
+  #   chapters: Chapter 10
+  #   materials:
+  #     - label: PDF
+  #       url: /assets/files/05-Variational-Inference.pdf
+  #     - label: Typst source
+  #       url: /assets/files/05-Variational-Inference.typ
+  # - title: Week 6 — Monte Carlo and MCMC
+  #   chapters: Chapters 11–12
+  #   materials:
+  #     - label: PDF
+  #       url: /assets/files/06-Monte-Carlo-MCMC.pdf
+  #     - label: Typst source
+  #       url: /assets/files/06-Monte-Carlo-MCMC.typ
+  # - title: Week 7 — Bayesian Neural Networks
+  #   chapters: Chapter 17
+  #   materials:
+  #     - label: PDF
+  #       url: /assets/files/07-Bayesian-Neural-Networks.pdf
+  #     - label: Typst source
+  #       url: /assets/files/07-Bayesian-Neural-Networks.typ
+  # - title: Week 8 — Gaussian Processes
+  #   chapters: Chapter 18
+  #   materials:
+  #     - label: PDF
+  #       url: /assets/files/08-Gaussian-Processes.pdf
+  #     - label: Typst source
+  #       url: /assets/files/08-Gaussian-Processes.typ
+  # - title: Week 9 — Generative Models and VAEs
+  #   chapters: Chapters 20–21
+  #   materials:
+  #     - label: PDF
+  #       url: /assets/files/09-Generative-Models-VAEs.pdf
+  #     - label: Typst source
+  #       url: /assets/files/09-Generative-Models-VAEs.typ
+  # - title: Week 10 — Autoregressive and Energy-Based Models
+  #   chapters: Chapters 22 and 24
+  #   materials:
+  #     - label: PDF
+  #       url: /assets/files/10-Autoregressive-Energy-Based-Models.pdf
+  #     - label: Typst source
+  #       url: /assets/files/10-Autoregressive-Energy-Based-Models.typ
+  # - title: Week 11 — Diffusion Models and GANs
+  #   chapters: Chapters 25–26
+  #   materials:
+  #     - label: PDF
+  #       url: /assets/files/11-Diffusion-GANs.pdf
+  #     - label: Typst source
+  #       url: /assets/files/11-Diffusion-GANs.typ
+  # - title: Week 12 — Latent Factor and State-Space Models
+  #   chapters: Chapters 28–29
+  #   materials:
+  #     - label: PDF
+  #       url: /assets/files/12-Latent-Factor-State-Space-Models.pdf
+  #     - label: Typst source
+  #       url: /assets/files/12-Latent-Factor-State-Space-Models.typ
+  # - title: Week 13 — Bayesian Nonparametrics and Representation Learning
+  #   chapters: Chapters 31–32
+  #   materials:
+  #     - label: PDF
+  #       url: /assets/files/13-Bayesian-Nonparametrics-Representation-Learning.pdf
+  #     - label: Typst source
+  #       url: /assets/files/13-Bayesian-Nonparametrics-Representation-Learning.typ
+  # - title: Week 14 — Interpretability
+  #   chapters: Chapter 33
+  #   materials:
+  #     - label: PDF
+  #       url: /assets/files/14-Interpretability.pdf
+  #     - label: Typst source
+  #       url: /assets/files/14-Interpretability.typ
+  # - title: Week 15 — Causality
+  #   chapters: Chapter 36
+  #   materials:
+  #     - label: PDF
+  #       url: /assets/files/15-Causality.pdf
+  #     - label: Typst source
+  #       url: /assets/files/15-Causality.typ
+
+source_support:
+  - title: Course-note template
+    label: Typst source
+    url: /assets/files/wdf.typ
+  - title: Course-note bibliography
+    label: BibTeX
+    url: /assets/files/refs.bib
+
+textbook:
+  author: Kevin P. Murphy
+  title: "Probabilistic Machine Learning: Advanced Topics"
+  publisher: MIT Press
+  year: 2023
+  official_url: https://probml.github.io/pml-book/book2.html
+  publisher_url: https://mitpress.mit.edu/9780262048439/probabilistic-machine-learning/
