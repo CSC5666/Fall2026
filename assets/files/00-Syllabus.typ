@@ -32,7 +32,7 @@
 ]
 
 #colorbox()[
-  *Course Homepage*:\
+  *Course Homepage*:https://csc5666.github.io/Fall2026/\
   *Gradescope*: https://www.gradescope.com/courses/1355369  |  *Entry Code*: YB3GJJ \
   *Edstem*: https://edstem.org/us/join/nMfdkZ\
 ]
