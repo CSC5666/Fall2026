@@ -9,11 +9,14 @@ project:
     status: PDF
 
 readings:
-  # - title: Week 1 — Foundations and Probability
-  #   chapters: Chapters 1–3
-  #   materials:
-  #     - label: PDF
-  #       url: /assets/files/01-Foundations-Probability.pdf
+  - title: Colab Introduction
+    materials:
+      - label: Notebook
+        url: https://colab.research.google.com/github/probml/pyprobml/blob/master/notebooks/tutorials/colab_intro.ipynb
+  - title: Pyro Introduction
+    materials:
+      - label: Notebook
+        url: https://colab.research.google.com/github/probml/pyprobml/blob/master/notebooks/tutorials/pyro_intro.ipynb
   #     - label: Typst source
   #       url: /assets/files/01-Foundations-Probability.typ
   # - title: Week 2 — Graphical Models
