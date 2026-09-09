@@ -238,21 +238,21 @@
     supplement: none,
   )
   show heading.where(level: 1): it => {
-    v(1.2em, weak: true)
-    text(size: 14pt, weight: "semibold", it)
+    v(2.0em, weak: true)
+    text(size: 16pt, weight: "semibold", it)
     v(0.5em, weak: true)
     line(length: 100%, stroke: 0.5pt)
-    v(1em, weak: true)
+    v(0.5em, weak: true)
   }
   show heading.where(level: 2): it => {
-    v(1.2em, weak: true)
-    text(size: 12pt, weight: "medium", style: "italic", it)
-    v(1em, weak: true)
+    v(1.5em, weak: true)
+    text(size: 14pt, weight: "medium", style: "italic", it)
+    v(0.5em, weak: true)
   }
   show heading.where(level: 3): it => {
-    v(1.2em, weak: true)
+    v(1.0em, weak: true)
     text(size: 12pt, fill: luma(40%), weight: "medium", style: "italic", it)
-    v(1em, weak: true)
+    v(0.5em, weak: true)
   }
 
   set page(
