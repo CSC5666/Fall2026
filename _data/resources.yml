@@ -30,6 +30,12 @@ readings:
       - label: PDF
         url: /assets/files/02-Graphical-Models.pdf
 
+  - title: Information Theory
+    chapters: Chapter 5
+    materials:
+      - label: PDF
+        url: /assets/files/03-Information.pdf
+
 source_support:
   - title: Course-note template
     label: Typst source
