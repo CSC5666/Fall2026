@@ -1,7 +1,7 @@
 #import "wdf.typ": *
 
 #show: template.with(
-  title: [Information Optimization],
+  title: [Information Theory],
   title-short: none,
   authors: "CSC 5666: Advanced Machine Learning, Fall 2026",
   authors-short: none,
@@ -612,62 +612,4 @@ The definition gives a notion of information for a single object with no referen
 #discussion(vspace: 2em)[
   + Entropy is a property of a distribution and $K$ is a property of a single string. Which is the right notion for "how surprising is this specific dataset"? Construct a case where the two disagree sharply, say which answer your intuition sides with, and then say what your intuition is quietly assuming about where the data came from.#v(2em)
   + Solomonoff's prior weights hypotheses by $2^(-K)$, which is a formal statement of Occam's razor. Name the assumption about the world that this encodes. Then give the strongest objection a critic could raise, and the best reply available to you. Connect the exchange to the practice of penalizing parameter count, which is the same argument with the search restricted.
-]
-
-#pagebreak()
-#wideblock()[
-
-  = Appendix: Additional Practice Problems
-
-  #v(1em)
-  Below is a selection of practice problems sourced from other courses and books on the topic. Most are solvable from the material above; a few may lean on material we state without developing, but serve as potentially useful jumping off points for further self study.
-
-  + _Staged updates._ Write the card draw from the desiderata section as a two-stage process, colour first and then suit within colour, and verify by hand that the chain rule requirement is a real constraint rather than an identity. Then check the two-stage decomposition against the numbers computed for $q'$ and $q''$. (MacKay poses a version with a bent-coin cascade in #link("http://www.inference.org.uk/itprnn/book.pdf")[_Information Theory, Inference, and Learning Algorithms_], Exercise 2.28, p. 38. The book is free to read online)
-
-  + _Jensen and Gibbs._ Prove Jensen's inequality for the two-point case directly from the definition of convexity, then extend it to $n$ points by induction. Use the result to prove Gibbs' inequality. (MacKay, Exercises 2.14, p. 35, and 2.26, p. 37)
-
-  + _When evidence fails to accumulate._ Under what conditions does the expected weight of evidence per observation fail to accumulate, so that no amount of data separates two hypotheses? Give one case where the failure is a property of the hypotheses and one where it is a property of the experiment, and say which of the two a better experimental design could repair.
-
-  + _Uncertain observations._ A sensor reports a temperature of $21 plus.minus 2$ degrees rather than an exact value. Write the posterior over $theta$ under Jeffrey's conditionalization rule, and explain what goes wrong if you instead condition on the point estimate $21$. Quantify the error in a simple Gaussian case.
-
-  + _I-projection onto a linear family._ Show that the I-projection of $p$ onto the linear family ${q : EE_q [r_i (X)] = alpha_i}$ is an exponential family distribution with base measure $p$. (#link("http://www.cs.cmu.edu/~aarti/Class/10704/Homework2.pdf")[CMU 10-704, Homework 2, Problem 1] (A. Singh). The maximum entropy derivation from Notes 01 is the special case where $p$ is uniform)
-
-  + _The entropy bound._ Prove $H(X) <= log K$, with equality only for the uniform distribution, working directly from Jensen's inequality rather than by quoting the identity $H(X) = log K - D_("KL")(p||u)$. (MacKay, Exercise 2.25, p. 37)
-
-  + _Convexity of the divergence._ Show that $D_("KL")(p||q)$ is jointly convex in the pair $(p,q)$, and use this to argue that entropy is concave in $p$. (#link("http://www.cs.cmu.edu/~aarti/Class/10704/Homework1.pdf")[CMU 10-704 _Information Processing and Learning_, Homework 1, Problem 2(d)] (A. Singh))
-
-  + _Information content and search._ You have twelve balls, identical except that one is either heavier or lighter, and a two-pan balance. Argue that weighing six against six cannot be optimal, and that three against three cannot either, then construct an optimal strategy. Explain the argument in terms of bits: how many bits does one weighing yield, and how many does the puzzle require? (#link("http://www.cs.cmu.edu/~aarti/Class/10704/Homework1.pdf")[CMU 10-704, Homework 1, Problem 1] (A. Singh); also MacKay, Exercise 4.1)
-
-  + _Coding and units._ Construct a Huffman code for the source with probabilities $(1\/3, 1\/3, 1\/4, 1\/12)$ and compute its expected codeword length. Compare with the entropy of the source, and explain the gap in terms of the divergence between the true distribution and the implicit distribution $2^(-ell(x))$ of the code. (Adapted from #link("http://www.cs.cmu.edu/~aarti/Class/10704/Homework3.pdf")[CMU 10-704, Homework 3, Problem 3]. The interpretation via $D_("KL")$ is the "units" section of these notes)
-
-  + _Maximum entropy with moment constraints._ Show that the density maximizing differential entropy subject to $EE[X] = mu$ and $EE[X^2] = alpha$ is Gaussian with mean $mu$ and variance $alpha - mu^2$. Then show that the maximum entropy joint distribution with given marginals is the product of those marginals, and connect this to total correlation. (#link("http://www.cs.cmu.edu/~aarti/Class/10704/Homework2.pdf")[CMU 10-704, Homework 2, Problems 2 and 3])
-
-  + _Maximum entropy on the half line._ Find the differential entropy of $X tilde "Exp"(lambda)$, then prove that $"Exp"(lambda)$ uniquely maximizes differential entropy among non-negative random variables with $EE[X] <= 1\/lambda$. (#link("https://web.stanford.edu/class/ee376a/files/exams/final_2016_sol.pdf")[Stanford EE376A, Final Exam 2016, Problem 1] (T. Weissman). Solutions are included in the linked PDF)
-
-  + _Entropy rate._ The entropy rate of a stationary process is $macron(H) = lim_(n arrow.r infinity) H(X_n|X_(1:n-1))$, and for a Markov chain it collapses to $H(X_2|X_1)$, which you may assume. For a stationary chain with transition matrix $T$ and stationary distribution $pi$, derive $macron(H)$ in terms of $pi$ and $T$, and find the transition probabilities that maximize it. For the two-state chain with rows $(1-p, p)$ and $(1,0)$, find the $p$ maximizing the entropy rate and interpret the answer. (#link("http://www.cs.cmu.edu/~aarti/Class/10704/Homework2.pdf")[CMU 10-704, Homework 2, Problem 4])
-
-  + _Maximum conditional entropy and logistic regression._#super[†] Show that the conditional distribution maximizing $H(Y|X)$ subject to matching the empirical expectations of a set of features has the logistic (softmax) form. Relate this to the exponential family result you proved for the I-projection. (#link("http://www.cs.cmu.edu/~aarti/Class/10704/Homework2.pdf")[CMU 10-704, Homework 2, Problem 6])
-
-  + _A joint table by hand._ Compute $I(X;Y)$ for the joint distribution below, along with $H(X,Y)$, $H(X)$, $H(Y)$, $H(X|y)$ for each $y$, and $H(X|Y)$. (MacKay, Exercise 8.6, p. 140. Working one table fully by hand is the fastest cure for confusing $H(X|y)$ with $H(X|Y)$)
-    $
-      p(x,y) = 1/32 mat(4, 2, 1, 1; 2, 4, 1, 1; 2, 2, 2, 2; 8, 0, 0, 0)
-    $
-    with rows indexed by $y = 1..4$ and columns by $x = 1..4$.
-
-  + _Chain rules._ Prove the general chain rule for entropy, $H(X_(1:n)) = sum_i H(X_i|X_(1:i-1)) <= sum_i H(X_i)$, and state when the inequality is tight. Then prove the corresponding chain rule for mutual information, $I(X_(1:n);Y) = sum_i I(X_i;Y|X_(1:i-1))$. (#link("http://www.cs.cmu.edu/~aarti/Class/10704/Homework1.pdf")[CMU 10-704, Homework 1, Problems 2(b) and 2(c)]; MacKay, Exercise 8.3, p. 140)
-
-  + _Processing chains._ Show that if $U arrow.r X arrow.r Y arrow.r V$ is a Markov chain then $I(U;V) <= I(X;Y)$. Justify any use of the implication that $X arrow.r Y arrow.r Z$ gives $Z arrow.r Y arrow.r X$. (#link("http://www.cs.cmu.edu/~aarti/Class/10704/Homework1.pdf")[CMU 10-704, Homework 1, Problem 3(a)]. MacKay, Exercise 8.9, p. 141, poses the same result for a world state, the data gathered about it, and the processed data)
-
-  + _Sufficiency for a uniform._ Show that if $X_1, dots, X_n tilde "uniform"(theta, theta+1)$ are iid, then $T = {min_i X_i, max_i X_i}$ is sufficient for $theta$. (#link("http://www.cs.cmu.edu/~aarti/Class/10704/Homework1.pdf")[CMU 10-704, Homework 1, Problem 3(b)] (A. Singh))
-
-  + _Gaussian mutual information._ For jointly Gaussian $(X,Y)$ with correlation $rho$ and equal variances, show $I(X;Y) = -1/2 log(1-rho^2)$. Comment on the limits $rho arrow.r plus.minus 1$ and $rho = 0$. (#link("http://www.cs.cmu.edu/~aarti/Class/10704/Homework2.pdf")[CMU 10-704, Homework 2, Problem 5] (A. Singh). Use the differential entropy of a Gaussian from the entropy section)
-
-  + _Parity and the binary symmetric channel._ Let $x,y$ be independent bits with $Pr(x=1)=p$ and $Pr(y=1)=q$, and let $z = x + y mod 2$. Compute $p(z)$ and $I(Z;X)$, first for $q = 1\/2$ and then in general. (MacKay, Exercise 8.7, p. 141. The general case is the binary symmetric channel with $x$ the input, $y$ the noise, and $z$ the output)
-
-  + _Explaining away._ Give an example of $X,Y,Z$ with $I(X;Y|Z) > I(X;Y)$ that is _not_ parity or exclusive-or, verify the strict inequality numerically, and name the causal structure you just built. (#link("http://www.cs.cmu.edu/~aarti/Class/10704/Homework1.pdf")[CMU 10-704, Homework 1, Problem 2(a)] (A. Singh))
-
-  + _Tightness of the VIB bound._ The variational bottleneck replaced the intractable marginal $p(z)$ with a learned $m(z)$. Show that the resulting bound on $I(Z;X)$ is tight exactly when $m(z)$ equals the aggregated posterior $integral dif x thin p(x) e(z|x)$, and explain why a unit Gaussian $m$ is usually a poor fit for that aggregate.
-
-  + _Information bottleneck in practice._ Train a small classifier with a stochastic encoder and the VIB objective on a dataset of your choice, sweeping $beta$. Plot accuracy against $EE[D_("KL")(e(z|x)||m(z))]$, which upper bounds $I(Z;X)$, and describe the shape of the resulting tradeoff curve. (Method and experimental setup from #link("https://arxiv.org/abs/1612.00410")[Alemi et al., "Deep Variational Information Bottleneck," 2017])
-
 ]

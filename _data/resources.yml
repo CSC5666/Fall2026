@@ -36,6 +36,12 @@ readings:
       - label: PDF
         url: /assets/files/03-Information.pdf
 
+  - title: Optimization
+    chapters: Chapter 6
+    materials:
+      - label: PDF
+        url: /assets/files/04-Optimization.pdf
+
 source_support:
   - title: Course-note template
     label: Typst source
