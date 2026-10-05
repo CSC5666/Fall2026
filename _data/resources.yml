@@ -42,6 +42,21 @@ readings:
       - label: PDF
         url: /assets/files/04-Optimization.pdf
 
+  - title: Inference
+    chapters: Chapters 7, 9
+    materials:
+      - label: PDF
+        url: /assets/files/05-Inference.pdf
+
+  - title: Variational Inference
+    chapters: Chapter 10
+    materials:
+      - label: PDF
+        url: https://arxiv.org/pdf/2108.13083
+
+
+
+
 source_support:
   - title: Course-note template
     label: Typst source
