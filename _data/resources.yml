@@ -54,6 +54,12 @@ readings:
       - label: PDF
         url: https://arxiv.org/pdf/2108.13083
 
+  - title: Introduction to Monte-Carlo Methods
+    chapters: Chapter 11
+    materials:
+      - label: PDF
+        url: /assets/files/07-Monte-Carlo.pdf
+
 
 
 

@@ -238,20 +238,18 @@
     supplement: none,
   )
   show heading.where(level: 1): it => {
+    v(3em, weak: true)
     text(size: 16pt, weight: "semibold", it)
     v(0.5em, weak: true)
     line(length: 100%, stroke: 0.5pt)
-    v(-0.5em)
   }
   show heading.where(level: 2): it => {
-    v(2em, weak: true)
+    v(3em, weak: true)
     text(size: 14pt, weight: "medium", style: "italic", it)
-    v(-0.5em)
   }
   show heading.where(level: 3): it => {
     v(2.0em, weak: true)
     text(size: 12pt, fill: luma(40%), weight: "medium", style: "italic", it)
-    v(-1em)
   }
 
   set page(
@@ -422,7 +420,7 @@
   )
 }
 
-#let discussion(body, vspace: 10em) = {
+#let discussion(body, vspace: 0em) = {
   colorbox(
     [#linebreak()] + body + [#v(vspace)],
     title: "Discussion",
@@ -438,8 +436,10 @@
   )
 }
 
-#let prompt(dy: auto, body) = sidenote(dy: dy, numbered: false)[
-  #discussion(vspace: 0em)[#body]
+#let side-discussion(dy: auto, body) = sidenote(dy: dy, numbered: false)[
+  #discussion(vspace: 0em)[
+    #body
+  ]
 ]
 
 

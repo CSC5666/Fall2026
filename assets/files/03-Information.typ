@@ -42,7 +42,7 @@ A reasonable measure of information gain should be:
 + _Continuous_ in its arguments, so small perturbations to $p$ or $q$ only slightly change $I[p||q]$.
 + _Non-negative_, $I[p||q] >= 0$, since we are measuring the magnitude of an update, not scoring it as good or bad. This pins down the sign and nothing else, and in particular says nothing about whether $I[p||q]$ and $I[q||p]$ agree.
 + _Permutation invariant_, so relabeling the outcomes of $x$ consistently across $p$ and $q$ does not change the answer.
-+ _Monotonic for uniform distributions_, so narrowing a uniform belief on $N$ states to a uniform belief on $N'$ of those same states, as when all four suits drop to the two black ones, is increasing in $N$ and decreasing in $N'$. The nesting matters: if the new states were not among the old ones the divergence would simply be infinite. #prompt(dy: -10em)[Monotonicity is imposed only on uniform distributions. Why does pinning down that one family determine $I$ everywhere else, up to a single overall constant? And what survives if we drop the axiom entirely? (Textbook §5.1.2.4, p. 223)]
++ _Monotonic for uniform distributions_, so narrowing a uniform belief on $N$ states to a uniform belief on $N'$ of those same states, as when all four suits drop to the two black ones, is increasing in $N$ and decreasing in $N'$. The nesting matters: if the new states were not among the old ones the divergence would simply be infinite. #side-discussion(dy: -10em)[Monotonicity is imposed only on uniform distributions. Why does pinning down that one family determine $I$ everywhere else, up to a single overall constant? And what survives if we drop the axiom entirely? (Textbook §5.1.2.4, p. 223)]
 
 + _Chain-rule consistent_, so that describing the same update in stages gives the same total. #sidenote()[This means that we could describe the $q'$ update equally as eliminating diamonds, and then eliminating hearts, and that the sum of those two information updates should equal the information of updating all at once. The physical situation is identical, so the measured update must be too. Notice what the requirement forces on us. The right hand side averages the conditional term over a marginal, and we had to choose _which_ of the two distributions to average under. This is what forces any measure of information to be _asymmetric_.] Splitting $x = (x_L, x_R)$ so that $p(x) = p(x_L)p(x_R|x_L)$, we require
 $
@@ -126,7 +126,7 @@ Equality needs both inequalities tight at once. Jensen is tight only when the ra
 
 _Reparametrization invariance_ says that pushing $x$ through an invertible map $y = f(x)$ leaves $D_("KL")$ unchanged, because $p(x) dif x = p(y) dif y$ and the Jacobian factors cancel between numerator and denominator. This is stronger than the permutation invariance we asked for, and more useful. The divergence describes the distributions themselves rather than the coordinates we wrote them in, so we may measure heights in feet or centimetres, or work in cartesian or polar coordinates, without changing the answer.
 
-#prompt(
+#side-discussion(
   dy: -1em,
 )[Reparametrization invariance is stronger than the desiderata asked for. Name a modeling situation where the extra strength does real work for you. (Textbook §5.1.2.3, p. 222)]
 
@@ -259,7 +259,7 @@ Consider s dataset of images. Any actual dataset, no matter how large, is a vani
 #sidenote(numbered: false)[Textbook: §5.1.7, pp. 231–232]
 
 More surprising, perhaps, than the MLE case is that Bayesian updating comes out the same way. We can find this by reversing which term we optimize over. If $q$ is the belief we already hold, and $p$ is the distribution we solve for being the result of an update. Let $q(theta, cal(D)) = q(theta) q(cal(D)|theta)$ be our prior joint over parameters and data. Having observed $cal(D)_0$, define our updated beliefs as the joint _closest_ to the prior joint that still respects what we saw:
-#prompt(
+#side-discussion(
   dy: 1em,
 )[Suppose we had posed the update as minimizing the _reverse_ divergence $D_("KL")(q||p)$ under the same constraint. What goes wrong, and what does that say about which argument is allowed to be a delta?]
 
@@ -344,7 +344,7 @@ $
 $
 Differences of differential entropies do not depend on the units even though $h$ itself does, so $I(X;Y) = h(X) + h(Y) - h(X,Y)$ is well defined for continuous variables, and is the definition we use for them.
 
-#prompt(
+#side-discussion(
   dy: -10em,
 )[The entropy of a Gaussian depends on $sigma$ but not $mu$. Why is that what we want? And why is the same insensitivity, applied to a change of units, not what we want?]
 
@@ -378,7 +378,7 @@ A slight generalization of entropy to two distributions is the _cross entropy_.
   $ H_("ce")(p,q) eq.def -sum_x p(x) log q(x), $
 ]
 
-#prompt()[Algebraically how do Cross entropy, entropy, and KL divergence relate?]
+#side-discussion()[Algebraically how do Cross entropy, entropy, and KL divergence relate?]
 
 We met cross entropy already as the training objective of maximum likelihood. By writing the cross entropy in terms of the KL divergence and single entropy we get two parts. The first is the divergence which we can reduce by improving the model, and second is the entropy of the data, which we cannot. A cross entropy that stops falling may not mean the optimizer failed. It may mean we have reached $H(p)$ and are now trying to predict noise.
 
@@ -411,7 +411,7 @@ While entropy allows us to measure fundamental uncertainty in the distribution o
   $
 ]
 
-#prompt()[
+#side-discussion()[
   Consider what we would be measuring if we defined MI using the opposite KL divergence direction.
 ]
 
@@ -440,7 +440,7 @@ This gives us a reading of $I(X;Y)$ as the _reduction in uncertainty_ about $X$ 
   caption: [Marginal, joint, and conditional entropy, and mutual information, drawn as areas. Reproduced from Murphy, Textbook Figure 5.6, p. 240, used there with permission of Katie Everett (CC BY-NC-ND).],
 )
 
-#prompt(
+#side-discussion(
   dy: -4em,
 )[$I(X;Y)$ is symmetric, yet $H(X|Y)$ and $H(Y|X)$ usually differ. Which asymmetry survives in the diagram?]
 
@@ -583,7 +583,7 @@ We can then minimize this objective with respect to the parameters of $e,d,m$. A
 )
 
 
-#prompt(
+#side-discussion(
   dy: 1em,
 )[Sufficiency was an equality, $I(Z;Y) = I(X;Y)$, which the IB objective never quite reaches for $beta > 0$. Explain why this is not a problem in terms of _generalization_.]
 
