@@ -61,6 +61,12 @@ readings:
         url: /assets/files/07-Monte-Carlo.pdf
 
 
+  - title: Markov Chain Monte-Carlo
+    chapters: Chapter 12, 13
+    materials:
+      - label: PDF
+        url: /assets/files/08-MCMC.pdf
+
 
 
 source_support:

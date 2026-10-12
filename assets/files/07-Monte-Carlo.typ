@@ -1,5 +1,5 @@
 #import "wdf.typ": *
-#import "inference-figures.typ": *
+#import "Figures/inference-figures.typ": *
 
 #show: template.with(
   title: [Monte-Carlo Methods],

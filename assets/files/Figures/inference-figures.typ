@@ -1,7 +1,7 @@
 // Shared diagrams for the inference notes (05-Inference.typ) and the
 // lecture companion (05-Inference-Lecture.typ). Each function returns bare
 // content; the caller wraps it in a figure with its own caption.
-#import "wdf.typ": *
+#import "../wdf.typ": *
 
 #let obs-fill = luma(80%)
 #let fac-fill = luma(85%)
