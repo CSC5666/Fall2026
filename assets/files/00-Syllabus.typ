@@ -40,14 +40,14 @@
 
 = Learning Objectives
 
-As an advanced graduate course the ultimate learning object of this course is for you to develop the knowledge and skills to engage with and contribute to contemporary research in machine learning. Of course, as this field is rapidly changing and very large we will cover some of the most important and fundamental approaches of current relevance and interest, while simultaneously developing the research skills to bring yourself up to speed in any other particular sub-area in the future.
+As an advanced graduate course the ultimate learning objective of this course is for you to develop the knowledge and skills to engage with and contribute to contemporary research in machine learning. Of course, as this field is rapidly changing and very large we will cover some of the most important and fundamental approaches of current relevance and interest, while simultaneously developing the research skills to bring yourself up to speed in any other particular sub-area in the future.
 
 
 = Course Overview
 
 This course will be based structurally around the textbook: _Probabilistic Machine Learning: Advanced Topics, Kevin Murphy, 2023_ #sidenote()[The book can be found for free at: https://probml.github.io/pml-book/book2.html], alongside additional research papers depending on topic.
 
-In your previous encounters with machine learning, it has probably been framed as about mapping inputs to outputs, that is using data to approximate some function $f: cal(X) -> cal(Y)$, frequently with black box models such as with deep learning. This kind of prediction can sometimes dismissed as little more than sophisticated curve fitting. That charge is not entirely fair: once $cal(X)$ and $cal(Y)$ are themselves high-dimensional (images, sentences, graphs, sequences of actions), the intuitions that make "curve fitting" sound simple in one dimension stop applying. But the criticism still points at something real: current approaches are weighted heavily toward predicting observable patterns, and comparatively light on *understanding the latent structure that produces those patterns*.
+In your previous encounters with machine learning, it has probably been framed as about mapping inputs to outputs, that is using data to approximate some function $f: cal(X) -> cal(Y)$, frequently with black box models such as with deep learning. This kind of prediction can sometimes be dismissed as little more than sophisticated curve fitting. That charge is not entirely fair: once $cal(X)$ and $cal(Y)$ are themselves high-dimensional (images, sentences, graphs, sequences of actions), the intuitions that make "curve fitting" sound simple in one dimension stop applying. But the criticism still points at something real: current approaches are weighted heavily toward predicting observable patterns, and comparatively light on *understanding the latent structure that produces those patterns*.
 
 This class will instead focus primarily on learning to represent those hidden structures to the best degree as is possible. This is required if we want data science to aspire to be like the rest of science, where uncovering root causes and mechanisms#sidenote()[Such as the disease behind the symptoms, or the distribution of minerals behind the spectrogram] is the actual goal, not merely predicting an outcome.
 
@@ -56,11 +56,11 @@ Towards this aim we will focus on _model-based_ methods rather than fitting $f: 
 
 In the first part of the course we will work to fill out a toolbox of inference methods built on a foundation of Probability Theory, Bayesian Statistics, Information Theory, and the language of Probabilistic Graphical Models. From there the rest of the course will focus on how we can use these methods and the choice of model itself, which depends on the task and domain, the kind and amount of data at hand, and the metric of success.
 
-The first model class we will cover are *predictive models*, which we will formalize as conditional distributions $p(y|x)$, where high dimensional input data $x in cal(X)$ is used to predict low dimensional output data $y in cal(Y)$. This will include discussion  of Bayesian Neural Networks, Gaussian Processes.
+One model class we will cover is *predictive models*, which we will formalize as conditional distributions $p(y|x)$, where high dimensional input data $x in cal(X)$ is used to predict low dimensional output data $y in cal(Y)$. Possible topics include Bayesian neural networks and Gaussian processes.
 
-The next model class we will cover are *generative models*, formalized as distributions of the high dimensional data space $p(x)$ or $p(x|c)$ if we have some form of conditioning such as captions for image generation. This will include discussion of Variational Auto-encoders, Auto-regressive models, Energy Based Models, Diffusion Models, and Generative Adversarial Networks.
+A second model class is *generative models*, formalized as distributions of the high dimensional data space $p(x)$ or $p(x|c)$ if we have some form of conditioning such as captions for image generation. Possible topics include variational autoencoders, autoregressive models, energy-based models, diffusion models, and generative adversarial networks.
 
-Finally we will move on the hardest class of machine learning modeling problems in *latent representation models*. These models are formalized as a conditionally factorized joint distribution $p(z,x) = p(z)p(x|z)$, where $z$ is the unobserved latent structure of the data. This will involve the hard task then of "uncovering" the structure by computing $p(z|x)$. This will include discussion of Latent factor models, Latent state space models, Bayesian Nonparametrics, Model Interpretability, and Causal Inference.
+We will also consider the hardest class of machine learning modeling problems, *latent representation models*. These models are formalized as a conditionally factorized joint distribution $p(z,x) = p(z)p(x|z)$, where $z$ is the unobserved latent structure of the data. This will involve the hard task then of "uncovering" the structure by computing $p(z|x)$. Possible topics include latent factor models, latent state-space models, Bayesian nonparametrics, model interpretability, and causal inference.
 
 One thing you should notice is that this is a huge range of material that all has the possibility of incredible depth. Our goal for this class will thus not be to derive or prove every theorem or mathematical nuance of the topics discussed. Instead we will cover at a rigorous yet relatively high level the models and methods that you will then have the opportunity to do a deeper dive on as they are relevant towards your final project.
 
@@ -81,51 +81,49 @@ The most interesting single thing you will do in this course will be your final 
 #pagebreak()
 #wideblock()[
   = Schedule
-  Below is a tentative (and probably too optimistic) schedule of the topics we will cover in the course. As the semester progresses things may change, so pay attention to announcements/notifications/emails.
+  Below is a tentative (and probably too optimistic) schedule of the topics we will cover. As the semester progresses things may change, so pay attention to course announcements.
 
-
-  #figure()[
+  #text(size: 8.5pt)[
     #table(
-      columns: 4,
-      align: left,
-      table.header([*Week*], [*Date*], [*Lecture Topic*], [*Deadlines*]),
-      [1], [Mon, Aug 24], [Course Introduction], [],
-      [1], [Wed, Aug 26], [Probability Foundations], [],
-      [2], [Mon, Aug 31], [Directed Probabilistic Graphical Models], [],
-      [2],
-      [Wed, Sep 2],
-      [Directed Probabilistic Graphical Models Continued],
-      [],
+      columns: (1.1fr, 2.8fr, 1.4fr),
+      align: (left, left, left),
+      inset: (x: 5pt, y: 2.8pt),
+      table.header([*Date*], [*Lecture Topic*], [*Deadlines*]),
+      [Mon, Aug 24], [Course Introduction], [],
+      [Wed, Aug 26], [Probability Foundations], [],
+      [Mon, Aug 31], [Directed Probabilistic Graphical Models], [],
+      [Wed, Sep 2], [Directed Probabilistic Graphical Models Continued], [],
+      [Mon, Sep 7], [_Labor Day — no class_], [],
+      [Wed, Sep 9], [Undirected Probabilistic Graphical Models], [],
+      [Mon, Sep 14], [Extensions of Probabilistic Graphical Models], [],
+      [Wed, Sep 16], [Information Theoretic Foundations], [],
+      [Mon, Sep 21], [Information Theoretic Foundations Continued], [],
+      [Wed, Sep 23], [Optimization], [],
+      [Mon, Sep 28], [Project Proposals], [Project Proposal],
+      [Wed, Sep 30], [Introduction to Inference], [],
+      [Mon, Oct 5], [Variational Inference], [],
+      [Wed, Oct 7], [Introduction to Monte Carlo Methods], [],
+      [Mon, Oct 12], [Markov Chain Monte Carlo], [],
+      [Wed, Oct 14], [Markov Chain Monte Carlo Continued], [],
+      [Mon, Oct 19], [Generative Models Overview], [Literature Review],
+      [Wed, Oct 21], [Variational Autoencoders], [],
+      [Mon, Oct 26], [Energy-Based Models], [],
+      [Wed, Oct 28], [Diffusion Models], [],
+      [Mon, Nov 2], [Generative Adversarial Networks], [],
+      [Wed, Nov 4], [Causal Inference], [],
+      [Mon, Nov 9],
+      [Prototype Check-ins and Project Work],
+      [Prototype Check-in],
 
-      [3], [Wed, Sep 9], [Undirected Probabilistic Graphical Models], [],
-      [3], [Mon, Sep 14], [Extensions of Probabilistic Graphical Models], [],
-      [4], [Wed, Sep 16], [Information Theoretic Foundations], [],
-      [5], [Mon, Sep 21], [Information Theoretic Foundations Continued], [],
-      [5], [Wed, Sep 23], [Optimization], [],
-      [6], [Mon, Sep 28], [Introduction to Inference], [Project Proposal],
-      [6], [Wed, Sep 30], [Variational Inference], [],
-      [7], [Mon, Oct 5], [Markov Chain Monte-Carlo], [],
-      [7], [Wed, Oct 7], [Sequential Monte-Carlo], [],
-      [8], [Mon, Oct 12], [Generative Models Overview], [],
-      [8], [Wed, Oct 14], [Variational Auto-encoders], [Literature Review],
-      [9], [Mon, Oct 19], [Energy Based Models], [],
-      [9], [Wed, Oct 21], [Diffusion Models], [],
-      [10],
-      [Mon, Oct 26],
-      [Generative Adversarial Networks, [],
-        [10],  [Wed, Oct 28], [Latent Factor Models]],
-      [],
-
-      [11], [Mon, Nov 2], [Latent State Space Models], [],
-      [11], [Wed, Nov 4], [Representation Learning], [Prototype Check-in],
-      [12], [Mon, Nov 9], [Interpretability], [],
-      [13], [Mon, Nov 16], [Causal Inference], [],
-      [13], [Wed, Nov 18], [Causal Inference Continued], [],
-      [Fall Break], [], [], [],
-      [14], [Wed, Dec 2], [Special Topics], [],
-      [15], [Mon, Dec 7], [Final Paper Review], [Final Paper Draft],
-      [15], [Wed, Dec 9], [Final Project Presentations], [Final Presentation],
-      [Finals], [Fri, Dec 18, 1:00–3:30 PM], [Retakes], [Final Paper],
+      [Wed, Nov 11], [_Veterans Day — no class_], [],
+      [Mon, Nov 16], [Bayesian Neural Networks and Gaussian Processes], [],
+      [Wed, Nov 18], [Latent Factor and State-Space Models], [],
+      [Nov 23–29], [_Fall Break — no class_], [],
+      [Mon, Nov 30], [Bayesian Nonparametrics], [],
+      [Wed, Dec 2], [Model Interpretability and Project Topics], [],
+      [Mon, Dec 7], [Final Report Review], [Final Report Draft],
+      [Wed, Dec 9], [Final Project Presentations], [Final Presentation],
+      [Fri, Dec 18], [Retakes, 1:00–3:30 p.m.], [Final Report, 11:59 p.m.],
     )
   ]
 ]
