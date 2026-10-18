@@ -67,6 +67,18 @@ readings:
       - label: PDF
         url: /assets/files/08-MCMC.pdf
 
+  - title: Introduction to Generative Models
+    chapters: Chapter 20
+    materials:
+      - label: PDF
+        url: /assets/files/09-Introduction-Generative-Models.pdf
+
+  - title: Variational Auto-Encoders
+    chapters: Chapter 21
+    materials:
+      - label: PDF
+        url: https://arxiv.org/pdf/1312.6114
+
 
 
 source_support:
