@@ -88,7 +88,8 @@ readings:
         url: https://atcold.github.io/NYU-DLSP20/en/week07/07-1/
       - label: Notebook
         url: https://uvadlc-notebooks.readthedocs.io/en/latest/tutorial_notebooks/tutorial8/Deep_Energy_Models.html
-
+      - label: Slides
+        url:   https://energy-based-models.github.io/document/EBMtutorial_cvpr.pdf
 
 source_support:
   - title: Course-note template
