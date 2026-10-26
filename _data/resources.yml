@@ -79,6 +79,15 @@ readings:
       - label: PDF
         url: https://arxiv.org/pdf/1312.6114
 
+  - title: Energy Based Models
+    chapters: Chapter 24
+    materials:
+      - label: Blog
+        url: https://yang-song.net/blog/2021/score/
+      - label: Course Notes
+        url: https://atcold.github.io/NYU-DLSP20/en/week07/07-1/
+      - label: Notebook
+        url: https://uvadlc-notebooks.readthedocs.io/en/latest/tutorial_notebooks/tutorial8/Deep_Energy_Models.html
 
 
 source_support:
