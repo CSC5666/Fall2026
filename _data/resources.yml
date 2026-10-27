@@ -91,6 +91,16 @@ readings:
       - label: Slides
         url:   https://energy-based-models.github.io/document/EBMtutorial_cvpr.pdf
 
+  - title: Diffusion Models
+    chapters: Chapter 25
+    materials:
+      - label: Blog
+        url: https://lilianweng.github.io/posts/2021-07-11-diffusion-models/
+      - label: Short Notes
+        url: https://arxiv.org/pdf/2208.11970
+      - label: Long Notes
+        url: https://arxiv.org/pdf/2403.18103
+
 source_support:
   - title: Course-note template
     label: Typst source
