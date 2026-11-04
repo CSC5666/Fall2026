@@ -79,6 +79,14 @@ readings:
       - label: PDF
         url: https://arxiv.org/pdf/1312.6114
 
+  - title: Causal Inference
+    chapters: Chapter 36
+    materials:
+      - label: Blog
+        url:  https://www.inference.vc/untitled/
+
+
+
   - title: Energy Based Models
     chapters: Chapter 24
     materials:
